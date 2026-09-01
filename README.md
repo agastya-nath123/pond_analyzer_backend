@@ -16,6 +16,7 @@ The backend is implemented using **FastAPI** and exposes REST API endpoints for 
 - [System Workflow](#system-workflow)
 - [Project Structure](#project-structure)
 - [Technology Stack](#technology-stack)
+- [Project Layout] (#project-layout)
 - [Installation](#installation)
 - [Running the Backend](#running-the-backend)
 - [API Documentation](#api-documentation)
@@ -283,6 +284,24 @@ Python 3.11
 | **Matplotlib** | Available for visualization and analysis during development |
 
 ---
+
+## Project Layout
+
+```code
+.
+├── app
+│   ├── __init__.py
+│   ├── main.py
+│   ├── routes
+│   │   ├── __init__.py
+│   │   └── contour.py
+│   └── services
+│       ├── __init__.py
+│       └── contour_analyzer.py
+├── README.md
+├── requirements.txt
+└── uploads
+```
 
 ## Installation
 

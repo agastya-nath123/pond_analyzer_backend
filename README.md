@@ -16,7 +16,6 @@ The backend is implemented using **FastAPI** and exposes REST API endpoints for 
 - [System Workflow](#system-workflow)
 - [Project Structure](#project-structure)
 - [Technology Stack](#technology-stack)
-- [Project Layout] (#project-layout)
 - [Installation](#installation)
 - [Running the Backend](#running-the-backend)
 - [API Documentation](#api-documentation)
@@ -285,7 +284,7 @@ Python 3.11
 
 ---
 
-## Project Layout
+### Project Layout
 
 ```code
 .

@@ -49,7 +49,7 @@ class CatchmentResponse(BaseModel):
              response_model=AnalyzeContourResponse
 )
 async def analyze_contour(
-    file: UploadFile = File(...)
+    contour_map: UploadFile = File(...)
 ):
     """
     Analyze a KML file containing topographic contour lines and identify
@@ -180,7 +180,7 @@ async def analyze_contour(
         not persisted between requests.
     """
 
-    file_path = Path("uploads") / file.filename
+    file_path = Path("uploads") / contour_map.filename
 
     with open(file_path, "wb") as buffer:
         buffer.write(await file.read())
@@ -209,7 +209,7 @@ async def analyze_contour(
              response_model=CatchmentResponse
 )
 async def find_catchment_endpoint(
-    file: UploadFile = File(...),
+    contour_map: UploadFile = File(...),
     pond_id: int = Form(...)
 ):
     """
@@ -360,7 +360,7 @@ async def find_catchment_endpoint(
         results produced by /analyzeContour.
     """
 
-    file_path = Path("uploads") / file.filename
+    file_path = Path("uploads") / contour_map.filename
 
     with open(file_path, "wb") as buffer:
         buffer.write(await file.read())

@@ -395,7 +395,7 @@ This endpoint performs the complete terrain-analysis pipeline. It takes the cont
 **Request**
 
 - Content type: `multipart/form-data`
-- Parameter: `file` — the KML contour dataset (e.g. `file = contours.kml`)
+- Parameter: `contour_map` — the KML contour dataset (e.g. `file = contours.kml`)
 
 **Processing**
 
@@ -447,7 +447,7 @@ This endpoint is intended to be used after `/analyzeContour`. The client selects
 
 - Content type: `multipart/form-data`
 - Parameters:
-  - `file` (e.g. `contours.kml`)
+  - `contour_map` (e.g. `contours.kml`)
   - `pond_id` (e.g. `67`)
 
 **Processing**
